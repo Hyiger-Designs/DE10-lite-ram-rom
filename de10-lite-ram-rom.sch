@@ -26,11 +26,9 @@ Wire Wire Line
 Wire Wire Line
 	3050 4300 2450 4300
 Wire Wire Line
-	3450 4500 2450 4500
+	3450 4500 3250 4500
 Wire Wire Line
 	1950 5400 1050 5400
-Wire Wire Line
-	3450 5400 3300 5400
 $Comp
 L power:GND #PWR027
 U 1 1 5D762CD7
@@ -184,12 +182,12 @@ F 0 "U2" H 9150 3450 50  0000 C CNN
 F 1 "SST39LF040" H 9850 3450 50  0000 C CNN
 F 2 "Package_LCC:PLCC-32_11.4x14.0mm_P1.27mm-Socket" H 9500 2400 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/268/01360A-709051.pdf" H 9500 2400 50  0001 C CNN
-F 4 "NOR Flash 4.5 to 5.5 1Mbit Multi-Purpose Flash" H 9500 2100 50  0001 C CNN "Description"
+F 4 "NOR Flash 3.0V to 3.6V 4Mbit Multi-Purpose Flash" H 9500 2100 50  0001 C CNN "Description"
 F 5 "Microchip" H 9500 2100 50  0001 C CNN "MFR"
 F 6 "SST39LF040-55-4C-NHE-T" H 9500 2100 50  0001 C CNN "MPN"
 F 7 "579-SST39LF040554CN" H 9500 2100 50  0001 C CNN "SPN"
 F 8 "Mouser" H 9500 2100 50  0001 C CNN "SPR"
-F 9 "https://www.mouser.com/datasheet/2/268/01360A-709051.pdf" H 9500 2100 50  0001 C CNN "SPURL"
+F 9 "https://www.mouser.com/ProductDetail/Microchip-Technology/SST39LF040-55-4C-NHE-T?qs=%2Fha2pyFaduhPPB5QetWHjyzBss7yQNcI4yvsI8zP%2F3nbLSqNwKNiLbVcDmJEYEkq" H 9500 2100 50  0001 C CNN "SPURL"
 	1    9500 2100
 	1    0    0    -1  
 $EndComp
@@ -334,28 +332,6 @@ F 3 "~" H 5450 4850 50  0001 C CNN
 	1    5450 4850
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:PWR_FLAG #FLG03
-U 1 1 5D96378E
-P 3300 5400
-F 0 "#FLG03" H 3300 5475 50  0001 C CNN
-F 1 "PWR_FLAG" H 3300 5573 50  0000 C CNN
-F 2 "" H 3300 5400 50  0001 C CNN
-F 3 "~" H 3300 5400 50  0001 C CNN
-	1    3300 5400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG02
-U 1 1 5D964468
-P 1050 5400
-F 0 "#FLG02" H 1050 5475 50  0001 C CNN
-F 1 "PWR_FLAG" H 1050 5573 50  0000 C CNN
-F 2 "" H 1050 5400 50  0001 C CNN
-F 3 "~" H 1050 5400 50  0001 C CNN
-	1    1050 5400
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	6650 2100 5800 2100
 $Comp
@@ -478,17 +454,6 @@ Wire Wire Line
 Wire Wire Line
 	1950 4500 1000 4500
 $Comp
-L power:PWR_FLAG #FLG01
-U 1 1 5D95CB67
-P 1000 4500
-F 0 "#FLG01" H 1000 4575 50  0001 C CNN
-F 1 "PWR_FLAG" H 1000 4673 50  0000 C CNN
-F 2 "" H 1000 4500 50  0001 C CNN
-F 3 "~" H 1000 4500 50  0001 C CNN
-	1    1000 4500
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:VCC #PWR030
 U 1 1 5D95CB6D
 P 1050 5400
@@ -501,17 +466,6 @@ F 3 "" H 1050 5400 50  0001 C CNN
 $EndComp
 Text Label 1350 4500 0    50   ~ 0
 5V
-$Comp
-L Connector_Generic:Conn_02x20_Odd_Even J6
-U 1 1 5D754F95
-P 2150 4900
-F 0 "J6" H 2200 6017 50  0000 C CNN
-F 1 "DE10-Lite GPIO" H 2200 5926 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H 2150 4900 50  0001 C CNN
-F 3 "~" H 2150 4900 50  0001 C CNN
-	1    2150 4900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5800 2200 6400 2200
 Text Label 8550 2700 0    50   ~ 0
@@ -548,13 +502,10 @@ Text Label 3050 4600 2    50   ~ 0
 A9
 Wire Wire Line
 	3050 4700 2450 4700
-Connection ~ 3300 5400
 Wire Wire Line
 	3050 5000 2450 5000
 Wire Wire Line
 	2450 4200 3050 4200
-Wire Wire Line
-	3300 5400 2450 5400
 $Comp
 L Device:C_Small C4
 U 1 1 5DC1E4EE
@@ -580,7 +531,6 @@ F 3 "" H 1000 4500 50  0001 C CNN
 	1    1000 4500
 	1    0    0    -1  
 $EndComp
-Connection ~ 1000 4500
 NoConn ~ 1950 5900
 Wire Wire Line
 	1050 5800 1050 5400
@@ -681,7 +631,13 @@ P 5300 2000
 F 0 "U1" H 4950 3100 50  0000 C CNN
 F 1 "AS6C4008A-55ZIN" H 5750 3100 50  0000 C CNN
 F 2 "Package_SO:TSOP-II-32_21.0x10.2mm_P1.27mm" H 5300 2100 50  0001 C CNN
-F 3 "" H 5300 2100 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/12/AS6C4008A-1288404.pdf" H 5300 2100 50  0001 C CNN
+F 4 "SRAM 4M, 2.7-5.5V, 55ns 512K x 8 Asynch SRAM" H 5300 2000 50  0001 C CNN "Description"
+F 5 "Alliance Memory" H 5300 2000 50  0001 C CNN "MFR"
+F 6 "AS6C4008A-55ZIN" H 5300 2000 50  0001 C CNN "MPN"
+F 7 "913-AS6C4008A-55ZIN" H 5300 2000 50  0001 C CNN "SPN"
+F 8 "Mouser" H 5300 2000 50  0001 C CNN "SPR"
+F 9 "https://www.mouser.com/ProductDetail/Alliance-Memory/AS6C4008A-55ZIN?qs=sGAEpiMZZMt9mBA6nIyysK%252B2%2Fppis4NuiMdKv%2FEcOn8%3D" H 5300 2000 50  0001 C CNN "SPURL"
 	1    5300 2000
 	1    0    0    -1  
 $EndComp
@@ -693,4 +649,93 @@ NoConn ~ 2450 5900
 Wire Wire Line
 	1950 4900 1350 4900
 NoConn ~ 2450 4000
+Text Notes 2550 4100 0    50   ~ 0
+W9
+Text Notes 2550 4200 0    50   ~ 0
+W8
+Text Notes 2550 4300 0    50   ~ 0
+W7
+Text Notes 2550 4400 0    50   ~ 0
+V5
+Text Notes 2550 4600 0    50   ~ 0
+AA15
+Text Notes 2550 4700 0    50   ~ 0
+W13
+Text Notes 2550 4800 0    50   ~ 0
+AB13
+Text Notes 2550 4900 0    50   ~ 0
+Y11
+Text Notes 2550 5000 0    50   ~ 0
+W11
+Text Notes 2550 5100 0    50   ~ 0
+AA10
+Text Notes 2550 5200 0    50   ~ 0
+Y8
+Text Notes 2550 5300 0    50   ~ 0
+Y7
+Text Notes 2550 5500 0    50   ~ 0
+Y6
+Text Notes 2550 5600 0    50   ~ 0
+Y5
+Text Notes 2550 5700 0    50   ~ 0
+Y4
+Text Notes 2550 5800 0    50   ~ 0
+Y3
+Text Notes 1600 5800 0    50   ~ 0
+AB3
+Text Notes 1600 5700 0    50   ~ 0
+AA5
+Text Notes 1600 5600 0    50   ~ 0
+AA6
+Text Notes 1600 5500 0    50   ~ 0
+AA7
+Text Notes 1600 5300 0    50   ~ 0
+AA8
+Text Notes 1600 5200 0    50   ~ 0
+AA9
+Text Notes 1600 5100 0    50   ~ 0
+AB10
+Text Notes 1600 5000 0    50   ~ 0
+AB11
+Text Notes 1600 4900 0    50   ~ 0
+AB12
+Text Notes 1600 4800 0    50   ~ 0
+W12
+Text Notes 1600 4700 0    50   ~ 0
+AA14
+Text Notes 1600 4600 0    50   ~ 0
+W5
+Text Notes 1600 4400 0    50   ~ 0
+W6
+Text Notes 1600 4300 0    50   ~ 0
+V7
+Text Notes 1600 4200 0    50   ~ 0
+V8
+$Comp
+L Connector_Generic:DE10-Lite_GPIO_Header J1
+U 1 1 5EA932AA
+P 2150 4900
+F 0 "J1" H 2200 6017 50  0000 C CNN
+F 1 "DE10-Lite_GPIO_Header" H 2200 5926 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Horizontal" H 2150 4900 50  0001 C CNN
+F 3 "~" H 2150 4900 50  0001 C CNN
+	1    2150 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5400 3450 5400
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5EAD2017
+P 3250 4500
+F 0 "#FLG0101" H 3250 4575 50  0001 C CNN
+F 1 "PWR_FLAG" H 3250 4673 50  0000 C CNN
+F 2 "" H 3250 4500 50  0001 C CNN
+F 3 "~" H 3250 4500 50  0001 C CNN
+	1    3250 4500
+	1    0    0    -1  
+$EndComp
+Connection ~ 3250 4500
+Wire Wire Line
+	3250 4500 2450 4500
 $EndSCHEMATC
