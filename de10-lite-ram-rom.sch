@@ -333,31 +333,9 @@ F 3 "~" H 5450 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6650 2100 5800 2100
-$Comp
-L Device:R_Small R7
-U 1 1 5D990AA4
-P 7800 3000
-F 0 "R7" H 7859 3046 50  0000 L CNN
-F 1 "10K" V 7800 2950 32  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7800 3000 50  0001 C CNN
-F 3 "~" H 7800 3000 50  0001 C CNN
-	1    7800 3000
-	1    0    0    -1  
-$EndComp
+	6400 2100 5800 2100
 Wire Wire Line
-	7800 3100 8900 3100
-$Comp
-L Device:R_Small R2
-U 1 1 5D99EDEB
-P 6650 2000
-F 0 "R2" H 6709 2046 50  0000 L CNN
-F 1 "10K" H 6709 1955 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6650 2000 50  0001 C CNN
-F 3 "~" H 6650 2000 50  0001 C CNN
-	1    6650 2000
-	-1   0    0    -1  
-$EndComp
+	8300 3100 8900 3100
 $Comp
 L power:VCC #PWR03
 U 1 1 5DA4300C
@@ -373,17 +351,6 @@ Text Label 1350 5400 0    50   ~ 0
 3V3
 Text Label 3050 5400 2    50   ~ 0
 GND
-$Comp
-L power:VCC #PWR014
-U 1 1 5DA50D5B
-P 7800 2900
-F 0 "#PWR014" H 7800 2750 50  0001 C CNN
-F 1 "VCC" H 7817 3073 50  0000 C CNN
-F 2 "" H 7800 2900 50  0001 C CNN
-F 3 "" H 7800 2900 50  0001 C CNN
-	1    7800 2900
-	1    0    0    -1  
-$EndComp
 Text Notes 9350 2250 0    50   ~ 0
 512K Flash
 Wire Wire Line
@@ -438,19 +405,6 @@ Wire Wire Line
 	5800 1700 6400 1700
 Wire Wire Line
 	5800 1800 6400 1800
-$Comp
-L power:VCC #PWR06
-U 1 1 5DBFE09F
-P 6650 1850
-F 0 "#PWR06" H 6650 1700 50  0001 C CNN
-F 1 "VCC" H 6667 2023 50  0000 C CNN
-F 2 "" H 6650 1850 50  0001 C CNN
-F 3 "" H 6650 1850 50  0001 C CNN
-	1    6650 1850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6650 1850 6650 1900
 Wire Wire Line
 	1950 4500 1000 4500
 $Comp
@@ -712,7 +666,7 @@ V7
 Text Notes 1600 4200 0    50   ~ 0
 V8
 $Comp
-L Connector_Generic:DE10-Lite_GPIO_Header J1
+L de10-lite-ram-rom-rescue:DE10-Lite_GPIO_Header-Connector_Generic J1
 U 1 1 5EA932AA
 P 2150 4900
 F 0 "J1" H 2200 6017 50  0000 C CNN
